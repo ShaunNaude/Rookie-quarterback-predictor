@@ -1,2 +1,5 @@
 # Spyder project settings
 .spyproject
+
+# Data folder
+dataFolder
