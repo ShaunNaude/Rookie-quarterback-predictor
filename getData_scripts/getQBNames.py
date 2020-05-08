@@ -16,7 +16,7 @@ for i in range(2017,2020):
         mask = players_df['position'].apply(lambda x: 'qb' in x or 'QB' in x)
         qb_df = players_df[mask]
         allQbs = allQbs.append(qb_df)
-        allQbs.to_csv("../data/qbs_" + year + ".csv")
+        allQbs.to_csv("../data/QB_names/qbs_" + year + ".csv")
         
 
 
@@ -30,4 +30,4 @@ allqb_df_unique = allqb_df.drop_duplicates(subset='player_id')
 
 allqb_names = allqb_df_unique.drop(columns=['Unnamed: 0','position'])
 
-allqb_names.to_csv('../data/all_qb_names.csv')
+allqb_names.to_csv('../data/QB_names/all_qb_names.csv')
